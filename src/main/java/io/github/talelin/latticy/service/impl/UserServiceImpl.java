@@ -131,7 +131,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserDO> implements 
         UserDO user = LocalUser.getLocalUser();
         boolean valid = userIdentityService.verifyUsernamePassword(user.getId(), user.getUsername(), dto.getOldPassword());
         if (!valid) {
-            throw new ParameterException(10032);
+            throw new ParameterException(10031);
         }
         valid = userIdentityService.changePassword(user.getId(), dto.getNewPassword());
         if (!valid) {

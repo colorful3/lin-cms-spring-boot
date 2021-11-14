@@ -18,4 +18,7 @@ public class LoginDTO {
 
     @NotBlank(message = "{password.new.not-blank}")
     private String password;
+
+    private String captcha;
+
 }
